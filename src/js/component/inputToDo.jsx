@@ -29,16 +29,16 @@ export const InputToDo = () => {
     return (
         <div className="container-sm" id='inputSize'>
                 <div className="d-flex justify-content-center">
-                    <h1 className="heading py-3">New Affirmations</h1>
+                    <h1 className="heading py-3">To Do List</h1>
                 </div>
                 <form classname="task-form" onSubmit={handleSubmit} >
                     <div className="task input-group mb-3">
                         <input 
-                        value={newItem} 
+                        value={newItem}
                         onChange={e => setNewItem(e.target.value)} 
                         type="text"   
                         className="form-control" 
-                        placeholder="What am I so.......?" 
+                        placeholder="What needs to be done?" 
                         aria-describedby="button-addon2" 
                         />               
                     </div>
@@ -46,17 +46,18 @@ export const InputToDo = () => {
                 <ul className="list-group">
                     {/* for each one of my todos i want to return an li */}
                     {todos.map(todo => {
-                        return ( 
-                        <li key={todo.id} className="list-group-item d-flex justify-content-between">
-                        {todo.title}
-                        <button onClick={() => deleteTodo(todo.id)} className="btn">x</button>
-                    </li> 
+                        return (    
+                        <li key={todo.id} className="list-group-item d-flex mb-3">
+                            <input type="checkbox" className="p-2" />    
+                            <span className="p-2 ms-3"> {todo.title}</span>
+                            <button onClick={() => deleteTodo(todo.id)} className="btn ms-auto p-2">x</button>
+                        </li> 
                     )  
                     })}    
                 </ul>  
-                {/* <div>
-                    {setTodos.length}
-                </div> */}
+                <div className="todo-counter">
+                    <a>{todos.length} {"items left"}</a>
+                </div>
         </div>
     )
 }

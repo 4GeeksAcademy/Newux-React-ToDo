@@ -20,10 +20,20 @@
     background-color: rgb(254, 251, 183);
     height: auto;
     padding-bottom: 50px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 .list-group-item {
     background-color: rgb(254, 251, 183);
-    border-style: none;
+    border-style: solid;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    
+}
+
+.todo-counter {
+    font-style: italic;
+    padding-top: 5px;
     
 }

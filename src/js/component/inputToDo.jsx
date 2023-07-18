@@ -19,6 +19,7 @@ export const InputToDo = () => {
 
       
     }
+
     const deleteTodo = (id) => {
         setTodos(currentTodos => {
             return currentTodos.filter(todo => todo.id !== id)
@@ -37,7 +38,7 @@ export const InputToDo = () => {
                         onChange={e => setNewItem(e.target.value)} 
                         type="text"   
                         className="form-control" 
-                        placeholder="What needs to be done?" 
+                        placeholder="What am I so.......?" 
                         aria-describedby="button-addon2" 
                         />               
                     </div>
@@ -53,6 +54,9 @@ export const InputToDo = () => {
                     )  
                     })}    
                 </ul>  
+                {/* <div>
+                    {setTodos.length}
+                </div> */}
         </div>
     )
 }

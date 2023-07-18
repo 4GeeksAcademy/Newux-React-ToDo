@@ -18,6 +18,12 @@
 
 .container-sm {
     background-color: rgb(254, 251, 183);
-    height: 500px;
+    height: auto;
+    padding-bottom: 50px;
 }
 
+.list-group-item {
+    background-color: rgb(254, 251, 183);
+    border-style: none;
+    
+}

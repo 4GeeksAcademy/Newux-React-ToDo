@@ -56,7 +56,7 @@ export const InputToDo = () => {
                     })}    
                 </ul>  
                 <div className="todo-counter">
-                    <a>{todos.length} {"items left"}</a>
+                    <a>{todos.length} {"items on list"}</a>
                 </div>
         </div>
     )

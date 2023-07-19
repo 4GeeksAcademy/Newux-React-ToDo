@@ -24,7 +24,12 @@ export const InputToDo = () => {
         setTodos(currentTodos => {
             return currentTodos.filter(todo => todo.id !== id)
         })
-        }  
+        }
+    // const completeTodo = (id) => {
+    //     setTodos(currentTodos => {
+    //         return currentTodos.filter(todo => todo.id !== id)
+    //     })
+    //     }     started function for checkbox text strike
 
     return (
         <div className="container-sm" id='inputSize'>
@@ -48,6 +53,7 @@ export const InputToDo = () => {
                     {todos.map(todo => {
                         return (    
                         <li key={todo.id} className="list-group-item d-flex mb-3">
+                            {/* <input onChange={() => completeTodo(todo.id)} type="checkbox" className="p-2" /> */}
                             <input type="checkbox" className="p-2" />    
                             <span className="p-2 ms-3"> {todo.title}</span>
                             <button onClick={() => deleteTodo(todo.id)} className="btn ms-auto p-2">x</button>
@@ -55,8 +61,9 @@ export const InputToDo = () => {
                     )  
                     })}    
                 </ul>  
-                <div className="todo-counter">
-                    <a>{todos.length} {"items on list"}</a>
+                <div className="todo-counter d-flex justify-content-between">
+                    <span>{"Completed"}</span>
+                    <span>{todos.length} {"items left"}</span>
                 </div>
         </div>
     )
